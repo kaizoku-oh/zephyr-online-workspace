@@ -11,5 +11,5 @@ int main(void) {
     k_msleep(100);
   }
 
-  return EXIT_SUCCESS;
+  return EXIT_FAILURE;
 }
