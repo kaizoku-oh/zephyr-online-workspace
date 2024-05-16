@@ -31,8 +31,9 @@
       ]
     }
   },
+  // Uncomment these to use on your local PC
   // Access USB port from the docker container
-  "runArgs": [
-    "--device=/dev/bus/usb/"
-  ]
+  // "runArgs": [
+  //   "--device=/dev/bus/usb/"
+  // ]
 }
