@@ -4,10 +4,6 @@ A Zephyr RTOS codespace based on devcontainer
 ## Usage
 
 ```bash
-# Make sure the zephyr path is pointing to your zephyr repo
-user@480c36b20b00:/workdir$ echo $ZEPHYR_BASE
-/workdir/deps/zephyr
-
 # Make sure the build is clean
 user@480c36b20b00:/workdir$ rm -rf /workdir/app/build
 
