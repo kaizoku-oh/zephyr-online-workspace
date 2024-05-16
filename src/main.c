@@ -8,7 +8,8 @@
 int main(void) {
 
   while (true) {
-    k_msleep(100);
+    printk("Running...\r\n");
+    k_msleep(1000);
   }
 
   return EXIT_FAILURE;

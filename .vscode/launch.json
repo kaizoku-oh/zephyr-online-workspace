@@ -20,6 +20,9 @@
             "configFiles": [
                 "${workspaceFolder}/zephyr/boards/arm/nucleo_f767zi/support/openocd.cfg"
             ],
+            "searchDir": [
+                "/workdir/zephyr/boards/arm/nucleo_f767zi/support"
+            ],
             "showDevDebugOutput": "raw",
         },
     ]

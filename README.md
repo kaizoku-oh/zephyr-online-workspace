@@ -15,6 +15,29 @@ user@480c36b20b00:/workdir$ west flash -d /workdir/app/build
 
 # Debug the app with gdb
 user@480c36b20b00:/workdir$ west debug --build-dir app/build/
+
+# west debug openocd commands
+/opt/toolchains/zephyr-sdk-0.16.5-1/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
+    -s /workdir/zephyr/boards/arm/nucleo_f767zi/support
+    -s /opt/toolchains/zephyr-sdk-0.16.5-1/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+    -f /workdir/zephyr/boards/arm/nucleo_f767zi/support/openocd.cfg
+    -c 'tcl_port 6333'
+    -c 'telnet_port 4444'
+    -c 'gdb_port 3333'
+    -c '$_TARGETNAME configure -rtos Zephyr' '-c init' '-c targets' '-c halt'
+
+/opt/toolchains/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+    -ex 'target extended-remote :3333' app/build/zephyr/zephyr.elf
+    -ex load
+
+# cortex-debug openocd command
+/opt/toolchains/zephyr-sdk-0.16.5-1/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
+    -c "gdb_port 50000"
+    -c "tcl_port 50001"
+    -c "telnet_port 50002"
+    -s /workdir/zephyr/boards/arm/nucleo_f767zi/support
+    -f /home/user/.vscode-server/extensions/marus25.cortex-debug-1.12.1/support/openocd-helpers.tcl
+    -f /workdir/zephyr/boards/arm/nucleo_f767zi/support/openocd.cfg
 ```
 
 ## Limitation
@@ -26,6 +49,6 @@ user@480c36b20b00:/workdir$ west debug --build-dir app/build/
 
 - [x] Flash app using openocd
 
-- [ ] Debug app using vscode cortex-debug
+- [x] Debug app using vscode cortex-debug
 
-- [ ] Restructure workspace to be compatible with the hard coded `ZEPHYR_BASE` path
+- [x] Restructure workspace to be compatible with the hard coded `ZEPHYR_BASE` path
