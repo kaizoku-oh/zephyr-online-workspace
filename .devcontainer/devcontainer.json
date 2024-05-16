@@ -14,6 +14,8 @@
         // IntelliSense
         "C_Cpp.default.compilerPath": "/opt/toolchains/zephyr-sdk-0.16.5-1/arm-zephyr-eabi/bin/arm-zephyr-eabi-gcc",
         "C_Cpp.default.compileCommands": "${workspaceFolder}/app/build/compile_commands.json",
+        // cortex-debug extension config
+        "cortex-debug.openocdPath.linux": "/opt/toolchains/zephyr-sdk-0.16.5-1/sysroots/x86_64-pokysdk-linux/usr/bin/openocd",
         // File Associations
         "files.associations": {}
       },

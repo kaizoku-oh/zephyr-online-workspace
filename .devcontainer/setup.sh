@@ -1,6 +1,7 @@
-# Take ownership of the workdir/ directory
+# Take ownership of the following directories
 echo "[setup.sh] Taking ownership of the workdir/ directory"
 sudo chown -R user:user /workdir/
+sudo chown -R user:user /opt/toolchains/zephyr-sdk-0.16.5-1/sysroots/x86_64-pokysdk-linux/usr/bin
 
 # Initialize the west repository in the 'app' subdirectory
 echo "[setup.sh] Initializing the west repository in the 'app' subdirectory"
