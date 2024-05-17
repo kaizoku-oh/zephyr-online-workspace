@@ -96,7 +96,7 @@
             ]
         },
         {
-            "label": "Flash (west app)",
+            "label": "Flash (app)",
             "type": "shell",
             "command": "west",
             "args": [
@@ -109,7 +109,7 @@
             ]
         },
         {
-            "label": "Flash (west boot)",
+            "label": "Flash (bootloader)",
             "type": "shell",
             "command": "west",
             "args": [

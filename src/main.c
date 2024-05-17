@@ -29,7 +29,7 @@ int main(void)
   /* Connect to LAN (get an IP address from DHCP) */
   net_connect();
 
-  /* Create client and start connecting to Golith cloud */
+  /* Create client and start connecting to Golioth cloud */
   client = golioth_client_create(client_config);
   golioth_client_register_event_callback(client, on_client_event, NULL);
 
