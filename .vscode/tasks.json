@@ -103,6 +103,8 @@
                 "flash",
                 "-d",
                 "${workspaceFolder}/app/build",
+                "--runner",
+                "openocd"
             ],
             "problemMatcher": [
                 "$gcc"
