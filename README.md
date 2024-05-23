@@ -40,6 +40,10 @@ user@480c36b20b00:/workdir$ west debug --build-dir app/build/
     -f /workdir/zephyr/boards/arm/nucleo_f767zi/support/openocd.cfg
 ```
 
+## Windows 11
+
+Install docker on WSL2 following this link https://learn.microsoft.com/en-us/windows/wsl/tutorials/wsl-containers
+
 ## Limitation
 `ZEPHYR_BASE` environment variable is hard coded in the docker image
 
